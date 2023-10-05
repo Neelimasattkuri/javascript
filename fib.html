@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fibonacci Series</title>
+</head>
+<body>
+  <script>
+    function fibonacciSeries(n) {
+      let fib = [0, 1];
+
+      for (let i = 2; i < n; i++) {
+        fib[i] = fib[i - 1] + fib[i - 2];
+      }
+
+      return fib;
+    }
+
+    let n = 10;
+    let result = fibonacciSeries(n);
+
+    document.write("Fibonacci Series up to " + n + ": <br>");
+    for (let i = 0; i < result.length; i++) {
+      document.write(result[i] + " ");
+    }
+  </script>
+</body>
+</html>
